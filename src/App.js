@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        turma:[
+            {
+                name: "David",
+                age: 28
+            },
+            {
+                name: "Fernanda",
+                age: 31
+            }
+        ]
+    }
+    render(){
+        return(
+            <div className="state">
+                <h1>Vamos começar com States!</h1>
+                <ul>
+                    <li>{this.state.turma[0].age}</li>
+                    <li>{this.state.turma[1].age}</li>
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default App;
+
